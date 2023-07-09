@@ -40,7 +40,7 @@ function Contact() {
         setNumber('')
         setMess('')
 
-        if(setName && setEmail && setLastName && setNumber && setMess === "")
+        if(setName && setEmail && setLastName && setNumber && setMess === null)
         {
 
         toast({

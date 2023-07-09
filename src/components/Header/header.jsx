@@ -53,10 +53,17 @@ function Header(props) {
     
     <div className='center sm:hidden flex w-[90%]'>
       <Navbar   color="faded" light>
+        <div className='flex justify-between w-[90%] gap-[14rem]'>
+
+        <div className='flex items-center'>
+
         <NavbarBrand  href="/" className="me-auto ">
             Azizbek
         </NavbarBrand>
-        <NavbarToggler  onClick={toggleNavbar} className="me-2 ml-[215px]" />
+        </div>
+        <div>
+
+        <NavbarToggler  onClick={toggleNavbar}  />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
@@ -72,6 +79,8 @@ function Header(props) {
             </NavItem>
           </Nav>
         </Collapse>
+        </div>
+        </div>
       </Navbar>
     </div>
     </>

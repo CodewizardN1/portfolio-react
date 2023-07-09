@@ -40,13 +40,13 @@ function Contact() {
         setNumber('')
         setMess('')
 
-        if(setName && setEmail && setLastName && setNumber && setMess === null)
+        if(!name & email & lastName & number & mess === '')
         {
 
         toast({
             title: 'Malumot',
             description: "Maluotingizni toldiring",
-            status: 'success',
+            status: 'info',
             duration: 9000,
             isClosable: true,
           })

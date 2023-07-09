@@ -1,6 +1,6 @@
+import { useToast } from "@chakra-ui/react"
 import axios from "axios"
 import { useState } from "react"
-
 
 function Contact() {
     const [name , setName] = useState('')
@@ -8,7 +8,7 @@ function Contact() {
     const [lastName , setLastName] = useState('')
     const [number , setNumber] = useState('')
     const [mess , setMess] = useState('')
-
+    const toast = useToast()
 
     const TOKEN = '6092539965:AAEHQysbjuGZOG7z10ylLt-_v-YrZpVktaI';
     const CHAT_ID = '-1001980443181';
@@ -40,9 +40,25 @@ function Contact() {
         setNumber('')
         setMess('')
 
-        
+        if(setName && setEmail && setLastName && setNumber && setMess === "")
+        {
 
+        toast({
+            title: 'Malumot',
+            description: "Maluotingizni toldiring",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+          })
 
+    }else{
+        toast({
+            title: 'Malumot',
+            description: "Maluotingiz muvafaqiyatli jonatildi",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+          })
     }
 
 

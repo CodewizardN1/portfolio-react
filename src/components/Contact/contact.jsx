@@ -40,18 +40,17 @@ function Contact() {
         setNumber('')
         setMess('')
 
-        if(setName && setEmail && setLastName && setNumber && setMess === "")
-        {
+    //     if(setName && setEmail && setLastName && setNumber && setMess === ""){
+    //     toast({
+    //         title: 'Malumot',
+    //         description: "Maluotingizni toldiring",
+    //         status: 'success',
+    //         duration: 9000,
+    //         isClosable: true,
+    //       })
 
-        toast({
-            title: 'Malumot',
-            description: "Maluotingizni toldiring",
-            status: 'success',
-            duration: 9000,
-            isClosable: true,
-          })
-
-    }else{
+    // }
+  
         toast({
             title: 'Malumot',
             description: "Maluotingiz muvafaqiyatli jonatildi",
@@ -59,7 +58,7 @@ function Contact() {
             duration: 9000,
             isClosable: true,
           })
-    }
+  
 
 
 
@@ -96,6 +95,6 @@ function Contact() {
         </div>
     </div>
   )
-}
+}}
 
 export default Contact
